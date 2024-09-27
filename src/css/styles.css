@@ -85,7 +85,6 @@
     text-align: left;
   }
   
-  
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -101,4 +100,23 @@
     height: 120px;
     animation: spin 2s linear infinite;
     margin: 0 auto;
+  }
+  
+.lightbox-open {
+    overflow: hidden; 
+  }
+  
+  .lightbox-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999; 
+  }
+  
+  .lightbox-open .gallery {
+    pointer-events: none; 
   }
